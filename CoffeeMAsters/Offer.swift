@@ -22,7 +22,10 @@ struct Offer: View {
 
 struct Offer_Previews: PreviewProvider {
     static var previews: some View {
-        Offer(title: "this is my title", description: "this is the description")
+        Group {
+            Offer(title: "My offer", description: "this is the description").previewLayout(.fixed(width: 350, height: 200)).preferredColorScheme(.light).previewInterfaceOrientation(.portraitUpsideDown)
+        }
+        
               
     }
 }
